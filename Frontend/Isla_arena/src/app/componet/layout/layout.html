@@ -1,12 +1,30 @@
-<div>
-    <div>
-        <h1>Hola mundo</h1>
-        <img src="img/logo.png" alt="Logo">
+<div class="contenedor_superior bg-azul-mar">
+  <div class="contenedor_lot">
+    <img class="logo1" src="img/logo.png" alt="Logo de Mariscos">
+    
+    <div class="barra-busqueda">
+      <input type="text" placeholder="Buscar mariscos, platillos, bebidas...">
+      <button class="btn_buscar">
+        <img src="img/search-icon.png" alt="Buscar">
+      </button>
     </div>
+
+    <nav class="menu-acciones">
+      <a class="whatsapp" href="https://web.whatsapp.com/">
+        <img src="img/whasap.png" alt="WhatsApp">
+        Whatsapp
+      </a>
+      <a class="carrito" href="">Mi carrito</a>
+      <a class="herramientas" href="">Herramientas</a>
+    </nav>
+  </div>
 </div>
 
-
-<a routerLink="/home">Home</a>
-<a routerLink="/bebida">BEBIDAS</a>
-
-
+<div class="contenedor_casicentro nav-mariscos">
+  <div class="contenedor_a">
+    <a routerLink="/home">Inicio</a>
+    <a routerLink="/bebida">Bebidas</a>
+    <a routerLink="/alimentos">Comidas</a>
+    <a routerLink="/especiales">Especiales del Mar</a>
+  </div>
+</div>
