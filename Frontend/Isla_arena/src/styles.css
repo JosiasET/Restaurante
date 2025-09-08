@@ -1,1 +1,121 @@
 /* You can add global styles to this file, and also import other style files */
+/* ===== ESTILOS GLOBALES ===== */
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografía global Arial */
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* ===== ESTILOS DE TEXTO ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* ===== ENLACES ===== */
+a {
+  color: #f9fcff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #00b4d8;
+  /*text-decoration: underline; */
+}
+
+/* Enlaces con estilo de botón */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #0077b6;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00b4d8;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* ===== FORMULARIOS ===== */
+input, textarea, select {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #0077b6;
+  box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25);
+}
+
+/* ===== UTILIDADES ===== */
