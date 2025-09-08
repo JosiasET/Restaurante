@@ -384,3 +384,107 @@
   z-index: 0;
   opacity: 0.6;
 }
+/*JOSIAS HIZO ESTO  
+/* Estilos específicos para el menú desplegable de herramientas - Versión vertical */
+.desplegar_menu {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.desplegar_menu .menu-trigger {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.desplegar_menu:hover .menu-trigger {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.desplegar_menu .menu-trigger img {
+  height: 20px;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.desplegar_menu:hover .menu-trigger img {
+  transform: scale(1.1);
+}
+
+.desplegar_menu .menu-trigger p {
+  color: white;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Contenedor para las opciones del menú */
+.desplegar_menu .opciones-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 10px;
+  padding: 5px 0;
+}
+
+.desplegar_menu:hover .opciones-menu {
+  display: block;
+  animation: fadeInTooltip 0.3s ease;
+}
+
+/* Estilos para cada opción del menú (ahora son enlaces reales) */
+.desplegar_menu .opcion-menu {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #023e8a !important;
+  font-weight: normal;
+  transition: all 0.2s ease;
+  text-align: left;
+  background: transparent;
+  border: none;
+  margin: 0;
+  border-radius: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.desplegar_menu .opcion-menu:last-child {
+  border-bottom: none;
+}
+
+.desplegar_menu .opcion-menu:hover {
+  background: #f0f8ff !important;
+  color: #0077b6 !important;
+  transform: none;
+}
+
+/* Estilos para cuando un enlace está activo o focus */
+.desplegar_menu .opcion-menu:focus {
+  outline: 2px solid #00b4d8;
+  outline-offset: -2px;
+}
+
+@keyframes fadeInTooltip {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
