@@ -21,7 +21,7 @@
             <p>Herramientas</p>
           </div>
           <div class="opciones-menu">
-            <a href="/administrador" class="opcion-menu">Administrador</a>
+            <a routerLink="/administrador" (click)="mostrarCarrusel = false" class="opcion-menu">Administrador</a>
             <a href="/ingresos" class="opcion-menu">Ingresos</a>
             <a href="/inventario" class="opcion-menu">Inventario</a>
             <a href="/reportes" class="opcion-menu">Reportes</a>
@@ -34,6 +34,7 @@
 
 <div class="contenedor_casicentro nav-mariscos">
   <div class="contenedor_a">
+    
     <a routerLink="/home" (click)="mostrarCarrusel = false">Inicio</a>
     <a routerLink="/bebida"  (click)="mostrarCarrusel = false">Bebidas</a>
     <a routerLink="/alimentos"  (click)="mostrarCarrusel = false" >Comidas</a>
@@ -81,3 +82,4 @@
       </span>
     </div>
 </div>
+
