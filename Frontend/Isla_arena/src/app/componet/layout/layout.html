@@ -21,7 +21,7 @@
             <p>Herramientas</p>
           </div>
           <div class="opciones-menu">
-            <a routerLink="/administrador" (click)="mostrarCarrusel = false" class="opcion-menu">Administrador</a>
+            <a routerLink="/administrador" class="opcion-menu">Administrador</a>
             <a href="/ingresos" class="opcion-menu">Ingresos</a>
             <a href="/inventario" class="opcion-menu">Inventario</a>
             <a href="/reportes" class="opcion-menu">Reportes</a>
@@ -34,52 +34,16 @@
 
 <div class="contenedor_casicentro nav-mariscos">
   <div class="contenedor_a">
-    
-    <a routerLink="/home" (click)="mostrarCarrusel = false">Inicio</a>
-    <a routerLink="/bebida"  (click)="mostrarCarrusel = false">Bebidas</a>
-    <a routerLink="/alimentos"  (click)="mostrarCarrusel = false" >Comidas</a>
-    <a routerLink="/especiales"  (click)="mostrarCarrusel = false">Especiales del Mar</a>
+    <a routerLink="/home" (click)="modoRegistro" >Inicio</a>
+    <a routerLink="/bebida" (click)="activado()" >Bebidas</a>
+    <a routerLink="alimentos" (click)="activado()" >Comidas</a>
+    <a routerLink="/especiales" (click)="activado()" >Especiales del Mar</a>
   </div>
 </div>
 
-
-<div *ngIf="mostrarCarrusel" class="contenedor_carrusel">    
-    <div class="container">
-      <div class="carrusel">
-        <div class="carrusel-inner">
-          <span>
-            <img class="img1" src="img/img1.jpg" alt="">
-            <p>lo mejor de la isla en un solo lugar</p>
-          </span>
-        
-          <span> 
-            <img class="img1"  src="img/img2.jpg" alt="">
-            <p>ven y disfruta de nuestras deliciosas comidas</p>
-          </span>
-
-          <span>
-            <img class="img1"  src="img/img3.jpg" alt="">
-            <p>el mejor ambiente para compartir con amigos</p>
-          </span>
-          
-          <span>
-            <img class="img1" src="img/img4.jpg" alt="">
-            <p>sabores que te transportan al paraiso</p>
-          </span>
-        
-        </div>
-      </div>
-    </div>
-
-
-    <div class="conteiner_texto">
-      <h2>¡Bienvenido a ISLA ARENA!</h2>
-      <h3>TU RESTAURANTE DE CONFIANZA</h3>
-
-      <span class="texto">
-      <p> En ISLA ARENA, nos enorgullece ofrecerte una experiencia culinaria inigualable con los mejores mariscos frescos y platillos deliciosos. Nuestro compromiso es brindarte un servicio excepcional y un ambiente acogedor para que disfrutes de cada visita. Ven y descubre por qué somos el restaurante favorito de la isla.<br>
-        ¡Te esperamos con los brazos abiertos!</p>
-      </span>
-    </div>
+<div *ngIf="modoRegistro">
+  <app-home></app-home>
 </div>
 
+
+<router-outlet></router-outlet>

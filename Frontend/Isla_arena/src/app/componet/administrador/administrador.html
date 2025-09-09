@@ -1,20 +1,24 @@
-<div>
-    <div>
+<div class="contenedor">
+    <div  class="caja">
 
 
-        <div>
-             <h2>Iniciar Sesion</h2>
+        <div class="login" *ngIf="!modoRegistro">
+            <h2>Iniciar Sesión</h2>
             <label for="">correo electronico</label>
             <input type="text" placeholder="ejemplo@gmail.con" [(ngModel)]="correo">
             <label for="">contraseña</label>
             <input type="password" placeholder="contraseña" [(ngModel)]="contrasena">
-            <button (click)="acept()" >Ingresar</button>
+
+            <div class="botones">
+                <button  class="btn-primario btn-inline" (click)="acept()" >Ingresar</button>
+                <button class="btn-primario btn-inline"  (click)="mostrarRegistro()">crear cuenta</button>
+            </div>
+
             <a href="#">¿Olvidaste tu contraseña?</a>
-            <a href="#">Crear una cuenta</a>
         </div>
        
-        <div>
-            <h2>registro</h2>
+        <div class="registro" *ngIf="modoRegistro">
+            <h2>Registro</h2>
 
             <label for="">Nombre</label>
             <input type="text" placeholder="Nombre" [(ngModel)]="nombre">
@@ -25,6 +29,11 @@
             <label for="">confirma contraseña</label>
             <input type="password" placeholder="contraseña" [(ngModel)]="con_contrasena">
 
+            <div class="botones">
+                <button class="btn-primario btn-inline" (click)="registre()">Aceptar</button>
+                <button  class="btn-primario btn-inline" (click)="mostrarLogin()">Regresar</button>
+            </div>
+           
         </div>
     </div>
 </div>

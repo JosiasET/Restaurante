@@ -7,10 +7,18 @@ import { Alimentos } from './pages/alimentos/alimentos';
 import { Administrador } from './componet/administrador/administrador';
 
 export const routes: Routes = [
-    {path:'home', component: Home},
-    {path:'bebida',component:Bebidas},
-    {path:'alimentos', component:Alimentos},
-    {path:'administrador', component:Administrador}
+    {
+        path: '',
+        component: Layout,
+        children: [
+            { path: 'home', component: Home },
+            { path: 'bebida', component: Bebidas },
+            { path: 'alimentos', component: Alimentos }
+        ]
+    },
+
+    { path: 'administrador', component: Administrador, pathMatch: 'full' },
+    
 ];
 
 
