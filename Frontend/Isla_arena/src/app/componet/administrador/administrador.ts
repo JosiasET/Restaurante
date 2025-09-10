@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, linkedSignal } from '@angular/core';
 import { FormsModule, NgModel } from '@angular/forms';
+import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-administrador',
@@ -10,6 +12,7 @@ import { FormsModule, NgModel } from '@angular/forms';
   styleUrl: './administrador.css'
 })
 export class Administrador {
+  constructor(private router: Router) { }
   nombre: string=''
   correo: string=''
   contrasena: string=''
@@ -29,10 +32,9 @@ export class Administrador {
       alert('Por favor llene todos los campos');
     }else{
       alert('Registro exitoso');
+      this.router.navigate(['/gestor']);
     }
   }
-
-
 
   registre(){
     if(this.nombre== '' || this.correo=='' || this.contrasena==''|| this.con_contrasena==''){
@@ -41,6 +43,7 @@ export class Administrador {
       alert('LAS CONTRASEÑAS NO COINCIDEN')
     }else{
       alert('REGISTRO EXITOSO')
+      this.router.navigate(['/gestor']);
     }
   }
   

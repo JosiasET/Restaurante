@@ -8,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class Alimentos {
 
+  alimentos = [
+    'macarrones con queso'
+    , 'ensalada de pasta'
+    , 'sopa de verduras'
+    , 'pollo al horno con patatas'
+    , 'tacos de carne'
+    
+  ]
+
+
+  constructor() { 
+    this.alimentos.sort();
+  }
 }

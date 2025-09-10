@@ -1,0 +1,45 @@
+<div>
+    <div>
+        <div>
+            <h1>Bienvenido Gestor Administrativo</h1>
+            <p>Desde aqui podras gestionar los productos, categorias y pedidos</p>
+        </div>
+
+        <div class="Contenedor-gestor">
+            <div class="gestor-opciones">
+               
+                <button (click)="setSection('resumen')">Resumen</button>
+                <button (click)="setSection('subir_p')">Subir Platillos</button>
+                <button (click)="setSection('subir_pro')">Subir Promociones</button>
+                <button (click)="setSection('crear_mesas')">Crear Mesas</button>
+                <button (click)="setSection('gestionar_inventarios')">Gestionar Inventarios</button>
+        
+            </div>
+        </div>
+
+        <div class="RESUMEN" *ngIf="activeSection === 'resumen'">
+            <h2>RESUMEN</h2>
+            <p>Aqui podras ver un resumen de las actividades recientes</p>
+        </div>
+
+        <div class="Subir_p" *ngIf="activeSection === 'subir_p'">
+            <h2>SUBIR PLATILLOS</h2>
+            <p>Aqui podras subir nuevos platillos al menu</p>
+        </div>
+
+        <div class="Subir_pro" *ngIf="activeSection === 'subir_pro'">
+            <h2>SUBIR PROMOCIONES</h2>
+            <p>Aqui podras subir nuevas promociones al menu</p>
+        </div>
+
+        <div class="Crear_mesas" *ngIf="activeSection === 'crear_mesas'">
+            <h2>CREAR MESAS</h2>
+            <p>Aqui podras crear nuevas mesas para el restaurante</p>
+        </div>
+
+        <div class="gestionar_inventarios" *ngIf="activeSection === 'gestionar_inventarios'">
+            <h2>GESTIONAR INVENTARIOS</h2>
+            <p>Aqui podras gestionar los inventarios del restaurante</p>
+        </div>
+    </div>
+</div>
