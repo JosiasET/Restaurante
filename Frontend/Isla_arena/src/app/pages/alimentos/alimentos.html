@@ -1,1 +1,9 @@
-<h1>HOLA SOY ALIMENTOS</h1>
+<h1>SOY ALIMENTOS</h1>
+<h4>RIKOS GUISOS</h4>
+
+<div *ngFor="let platillo of platillos" class="platillo">
+  <img [src]="platillo.imagen" alt="{{platillo.nombre}}" width="150">
+  <h3>{{ platillo.nombre }}</h3>
+  <p>{{ platillo.descripcion }}</p>
+  <strong>Precio: {{ platillo.precio | currency }}</strong>
+</div>

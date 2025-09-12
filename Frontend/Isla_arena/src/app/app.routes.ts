@@ -5,6 +5,8 @@ import { Home } from './pages/home/home';
 import { Bebidas } from './pages/bebidas/bebidas';
 import { Alimentos } from './pages/alimentos/alimentos';
 import { Administrador } from './componet/administrador/administrador';
+import { Gestor } from './pages/gestor/gestor';
+import { Gestoradmi } from './componet/gestoradmi/gestoradmi';
 
 export const routes: Routes = [
     {
@@ -18,6 +20,7 @@ export const routes: Routes = [
     },
 
     { path: 'administrador', component: Administrador, pathMatch: 'full' },
+    {path:'gestor', component: Gestoradmi, pathMatch:'full'}
     
 ];
 

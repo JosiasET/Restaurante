@@ -36,14 +36,9 @@
   <div class="contenedor_a">
     <a routerLink="/home" (click)="modoRegistro" >Inicio</a>
     <a routerLink="/bebida" (click)="activado()" >Bebidas</a>
-    <a routerLink="alimentos" (click)="activado()" >Comidas</a>
+    <a routerLink="/alimentos" (click)="activado()" >Comidas</a>
     <a routerLink="/especiales" (click)="activado()" >Especiales del Mar</a>
   </div>
 </div>
-
-<div *ngIf="modoRegistro">
-  <app-home></app-home>
-</div>
-
 
 <router-outlet></router-outlet>
