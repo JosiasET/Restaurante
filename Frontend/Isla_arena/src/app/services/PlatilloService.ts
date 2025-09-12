@@ -4,7 +4,7 @@ import { Platillo } from '../models/platillo';
 
 @Injectable({
   providedIn: 'root'
-})
+})  
 export class PlatilloService {
   private platillos = new BehaviorSubject<Platillo[]>([]);
   platillos$ = this.platillos.asObservable();

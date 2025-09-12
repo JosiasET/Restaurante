@@ -1,6 +1,6 @@
-<div>
-    <div>
-        <div>
+<div class="gestoradmi">
+    <div class="contenedor-gestoradmi">
+        <div class="header-gestor">
             <h1>Bienvenido Gestor Administrativo</h1>
             <p>Desde aqui podras gestionar los productos, categorias y pedidos</p>
         </div>
@@ -29,12 +29,11 @@
 
         <div class="Subir_p" *ngIf="activeSection === 'subir_p'">
            <h2>SUBIR PLATILLOS</h2>
-
-        <input type="file" (change)="onFileSelected($event)">
-        <input type="text" [(ngModel)]="nombre" placeholder="Nombre del platillo">
-        <input type="text" [(ngModel)]="descripcion" placeholder="Descripción del platillo">
-        <input type="number" [(ngModel)]="precio" placeholder="Precio del platillo">
-        <button (click)="subirPlatillo()">Subir Platillo</button>
+            <input type="file" (change)="onFileSelected($event)">
+            <input type="text" [(ngModel)]="nombre" placeholder="Nombre del platillo">
+            <input type="text" [(ngModel)]="descripcion" placeholder="Descripción del platillo">
+            <input type="number" [(ngModel)]="precio" placeholder="Precio del platillo">
+            <button (click)="subirPlatillo()">Subir Platillo</button>
 
         </div>
 

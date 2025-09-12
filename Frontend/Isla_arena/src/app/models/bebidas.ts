@@ -1,4 +1,4 @@
-export interface Platillo {
+export interface Bebida {
   nombre: string;
   descripcion: string;
   precio: number;
