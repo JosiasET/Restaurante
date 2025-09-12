@@ -1,24 +1,24 @@
 import { Component } from '@angular/core';
-
+import { Platillo } from '../../models/platillo';
+import { PlatilloService } from '../../services/PlatilloService';
+import { FormsModule } from '@angular/forms';
+import { CommonModule, CurrencyPipe } from '@angular/common';
+import { OnInit } from '@angular/core';
 @Component({
   selector: 'app-alimentos',
-  imports: [],
+  imports: [FormsModule,CurrencyPipe,CommonModule],
   templateUrl: './alimentos.html',
-  styleUrl: './alimentos.css'
+  styleUrl: './alimentos.css',
 })
-export class Alimentos {
+export class Alimentos implements OnInit {
+  platillos: Platillo[] = [];
 
-  alimentos = [
-    'macarrones con queso'
-    , 'ensalada de pasta'
-    , 'sopa de verduras'
-    , 'pollo al horno con patatas'
-    , 'tacos de carne'
-    
-  ]
+  constructor(private platilloService: PlatilloService) {}
 
-
-  constructor() { 
-    this.alimentos.sort();
+  ngOnInit() {
+    this.platilloService.platillos$.subscribe(data => {
+      console.log("Platillos recibidos en Alimentos:", data); // 👈 debug
+      this.platillos = data;
+    });
   }
 }
